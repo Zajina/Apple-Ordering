@@ -1,0 +1,69 @@
+/* Stage 3 catalog, cart, and wishlist styling */
+.inline-action{display:inline-flex;margin:0}.product-price{font-size:14px;font-weight:700;margin:12px 0 4px}.product-stock{font-size:11px;color:#555;margin:0}
+.shop-flash{max-width:1120px;margin:18px auto 0;padding:12px 16px;background:#f4f4f4;border:1px solid #bbb;border-radius:7px;font-size:13px}
+.shop-flash.error{background:#fff2f2;border-color:#d9aaaa;color:#7b1c1c}
+.shop-page{max-width:1160px;margin:0 auto;padding:48px 22px 75px;min-height:55vh}
+.shop-page-heading{text-align:center;margin:0 auto 28px}.shop-page-heading h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(30px,4vw,42px);margin:5px 0 10px}.shop-page-heading>p:last-child{color:#555;font-size:13px}
+.empty-state{background:#fff;border-radius:12px;text-align:center;padding:48px 20px}.empty-state h2{font-family:'Playfair Display',Georgia,serif}.empty-state p{font-size:13px;color:#555;margin-bottom:22px}
+.shop-primary,.shop-secondary{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:6px;padding:12px 16px;font-size:12px;font-weight:700;border:1px solid #111}.shop-primary{background:#111;color:#fff}.shop-primary:hover{background:#333}.shop-secondary{background:#fff;color:#111;margin-top:10px}.disabled-link{opacity:.7}
+.shop-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.shop-items{display:grid;gap:14px}.shop-line-item{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:18px;align-items:start;background:#fff;border-radius:10px;padding:16px}.shop-line-item>img{width:120px;height:120px;object-fit:contain;background:#f4f4f4;border-radius:7px}.shop-line-info h2,.wishlist-card h2{font-family:'Playfair Display',Georgia,serif;font-size:19px;margin:2px 0 8px}.shop-line-info p{font-size:12px;color:#555;margin:4px 0}.line-total{font-size:14px;white-space:nowrap;padding-top:5px}.line-controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:12px}.quantity-form{display:flex;align-items:center;gap:7px}.quantity-form label{font-size:12px}.quantity-form input{width:65px;padding:7px;border:1px solid #ccc;border-radius:5px}.small-action{background:#111;color:#fff;border:1px solid #111;border-radius:5px;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer}.text-action{border:0;background:transparent;text-decoration:underline;text-underline-offset:3px;font-size:11px;cursor:pointer;color:#444;padding:7px}
+.order-summary{background:#fff;border-radius:10px;padding:22px;position:sticky;top:20px}.order-summary h2{font-family:'Playfair Display',Georgia,serif;font-size:22px;margin:0 0 18px}.order-summary>div{display:flex;justify-content:space-between;gap:12px;font-size:12px;margin:12px 0}.order-summary>div span:last-child{max-width:135px;text-align:right}.summary-note{font-size:11px;color:#666;line-height:1.5;margin:18px 0}.order-summary .shop-primary,.order-summary .shop-secondary{display:flex;width:100%}
+.guest-wishlist-note{font-size:12px;text-align:center;background:#fff;padding:12px;border-radius:6px}.wishlist-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.wishlist-card{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;background:#fff;border-radius:10px;padding:16px}.wishlist-card>img{width:150px;height:150px;object-fit:contain;background:#f4f4f4;border-radius:7px}.wishlist-card p{font-size:12px;color:#555;line-height:1.5}.wishlist-card strong{font-size:13px}.wishlist-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:13px}
+@media(max-width:850px){.shop-layout{grid-template-columns:1fr}.order-summary{position:static}.wishlist-grid{grid-template-columns:1fr}}
+@media(max-width:540px){.shop-page{padding:28px 12px 45px}.shop-line-item{grid-template-columns:85px minmax(0,1fr);gap:12px;padding:12px}.shop-line-item>img{width:85px;height:85px}.line-total{grid-column:2}.wishlist-card{grid-template-columns:100px minmax(0,1fr);gap:12px;padding:12px}.wishlist-card>img{width:100px;height:100px}.shop-line-info h2,.wishlist-card h2{font-size:16px}}
+
+/* Stage 4: checkout and order history */
+.checkout-layout { align-items: start; }
+.checkout-form { gap: 10px; }
+.checkout-form h2 { margin: 12px 0 4px; }
+.checkout-form textarea { width: 100%; box-sizing: border-box; resize: vertical; }
+.payment-option { border: 1px solid #d9d9d9; padding: 14px; border-radius: 8px; margin-bottom: 12px; }
+.payment-option p { margin: 6px 0 0; color: #666; }
+.checkout-summary-item { display: flex; justify-content: space-between; gap: 14px; margin: 12px 0; font-size: .92rem; }
+.summary-total { border-top: 1px solid #ddd; padding-top: 14px; font-size: 1.08rem; }
+.order-history { display: grid; gap: 22px; }
+.order-history-card { border: 1px solid #ddd; border-radius: 12px; padding: 22px; background: #fff; }
+.order-history-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; border-bottom: 1px solid #eee; padding-bottom: 14px; }
+.order-history-top h2 { margin: 4px 0; overflow-wrap: anywhere; }
+.order-history-top p { color: #666; margin: 4px 0; }
+.order-status { background: #f0f0f0; border-radius: 30px; padding: 7px 12px; font-size: .85rem; white-space: nowrap; }
+.order-history-details { padding: 12px 0; }
+.order-history-details p { margin: 8px 0; overflow-wrap: anywhere; }
+.order-history-total { font-size: 1.1rem; }
+.order-history-items { border-top: 1px solid #eee; padding-top: 12px; }
+.order-history-item { display: flex; align-items: center; gap: 12px; padding: 8px 0; }
+.order-history-item img { width: 54px; height: 54px; object-fit: contain; background: #f7f7f7; border-radius: 6px; }
+.order-history-item span { flex: 1; }
+.order-success { max-width: 680px; margin: 0 auto; }
+.success-total { display: flex; justify-content: center; gap: 12px; margin: 18px 0; font-size: 1.15rem; }
+@media (max-width: 720px) {
+  .order-history-card { padding: 15px; }
+  .order-history-top { flex-direction: column; }
+  .checkout-summary-item { font-size: .85rem; }
+}
+
+/* Stage 5: final responsive and usability polish */
+.shop-primary:focus-visible,
+.shop-secondary:focus-visible,
+.small-action:focus-visible,
+.text-action:focus-visible,
+.account-menu a:focus-visible,
+.main-nav a:focus-visible,
+.icon-btn:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 3px;
+}
+.checkout-form input,
+.checkout-form textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.order-history-item strong { white-space: nowrap; }
+.order-history-details p { line-height: 1.55; }
+@media (max-width: 540px) {
+  .checkout-form { padding: 0; }
+  .order-history-item { align-items: flex-start; flex-wrap: wrap; }
+  .order-history-item span { min-width: 120px; }
+  .order-history-item strong { margin-left: 66px; }
+}
